@@ -10,12 +10,12 @@ This code was generated on JupyterLab version 4.2.5. Note that some of the code 
 
 The following packages were used. These must be installed prior to running the code if not already installed. An optional install code block has been provided with some of the less common packages.
 
-matplotlib
-pandas
-numpy
-seaborn
-plotly
-plotnine
+matplotlib <br>
+pandas <br>
+numpy <br>
+seaborn <br>
+plotly <br>
+plotnine <br>
 
 ## Context:
 
