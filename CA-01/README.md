@@ -16,6 +16,7 @@ numpy <br>
 seaborn <br>
 plotly <br>
 plotnine <br>
+dash <br>
 
 ## Context:
 
