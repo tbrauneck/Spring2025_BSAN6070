@@ -24,8 +24,8 @@ This program was generated for a graduate-level business analytics course. It de
 ## Data Source:
 
 The data used in this program is house pricing data for 1,460 homes. The source file and relevant dictionary are available publicly on GitHub.
-	Dictionary: https://github.com/ArinB/MSBA-CA-Data/raw/refs/heads/main/CA01/data_description.txt
-	Source file: https://github.com/ArinB/MSBA-CA-Data/raw/refs/heads/main/CA01/house-price-train.csv
+	Dictionary: https://github.com/ArinB/MSBA-CA-Data/raw/refs/heads/main/CA01/data_description.txt <br>
+	Source file: https://github.com/ArinB/MSBA-CA-Data/raw/refs/heads/main/CA01/house-price-train.csv <br>
 
 Most sections of this program have been designed in reusable blocks that can fit any csv source file. However, some of the pre-processing steps are source-specific; individual feature names or values are called. These lines of code will need modification or removal if a new source is used. Sizing may also require modification so that there are the correct number of plots and figures fit a standard screen width.  
 
