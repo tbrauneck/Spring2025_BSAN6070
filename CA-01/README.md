@@ -34,10 +34,10 @@ Most sections of this program have been designed in reusable blocks that can fit
 
 The code includes detailed markdown with a report-like structure. A table of contents has been provided at the beginning.
 
-All lines should be run in order. Aside from installations, no modification should be required. Note that plot matrices may take several minutes or more to run, depending on the speed of your machine. Individual plots in the initial scatter plot matrix may be too small to read. Recommended options are:
+All lines should be run in order. Note that plot matrices do not render correctly in GitHub's preview. To see the matricies, use JupyterLab or github.dev. It may take several minutes or more to run the scatterplot matricies, depending on the speed of your machine. Individual plots in the initial scatter plot matrix may be too small to read. Available options are:
 
-1) Save the matrix and view in a program that allows zoom
+1) Save the matrix and view in a program that allows zoom.
 2) An abbreviated matrix with only continuous variables of moderate-high cardinality has been provided. This may be easier to view.
-3) An interactive scatterplot matrix has been provided. Hover the cursor over a plot to see the variable names; this shows which features are compared.
+3) An interactive scatterplot matrix has been provided. Hover the cursor over a plot to see the variable names; this shows which features are compared. This plot does not render on GitHub, but is visible via github.dev or JupyterLab.
 
 
