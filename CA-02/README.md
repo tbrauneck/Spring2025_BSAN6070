@@ -14,9 +14,9 @@ The data source for this project is not publicly available at this time, however
 
 ## IMPORTANT NOTES
 
-The path of your data folders 'train-mails' and 'test-mails' must be './train-mails' and './test-mails'. This means you must have your .ipynb file and these folders in the SAME FOLDER in your laptop or Google Drive. The reason for doing this is, this way the peer reviewes and I would be able to run your code from our computers using this exact same relative path, irrespective of our folder hierarchy.
+The path of your data folders 'train-mails' and 'test-mails' must be './train-mails' and './test-mails'. This means you must have your .ipynb file and these folders in the SAME FOLDER in your laptop or Google Drive. This ensures you can use the same relative path, irrespective of your folder hierarchy.
 
-Depending on your environment (i.e., Windows/Mac and Jupyter/Colab), you may need to update the delimiters in this code from '\\' to '/'. 
+Depending on your environment (i.e., Windows/Mac and Jupyter/Colab), you may need to update the delimiters in this code from '\\\\' (double backslash) to '/' (forward slash). 
 
 ## Versioning
 This code was generated on JupyterLab version 4.2.5. The code may need to be updated for use in later versions.
