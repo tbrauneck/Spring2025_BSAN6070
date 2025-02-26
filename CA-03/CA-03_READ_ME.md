@@ -16,17 +16,17 @@ This is a decision tree classifier program with hyperparameter tuning. The decis
 Authored by Tina Brauneck. Initially coded in February 2025.
 
 ## Data Source
-The dataset was obtained from the Census Bureau and represents salaries of people along with seven demographic variables. The following is a description of our dataset:<br>
+The dataset was obtained from the Census Bureau and represents people's salaries, along with nine demographic variables. The following is a description of our dataset:<br>
 • Number of target classes: 2 ('>50K' and '<=50K') [ Labels: 1, 0 ]<br>
 • Number of attributes (Columns): 11<br>
 • Number of instances (Rows): 48,842<br>
 
 Access the dataset here: https://github.com/ArinB/MSBA-CA-03-Decision-Trees/blob/master/census_data.csv?raw=true<br>
 
-Testing and training observations have been flagged in the source data using the 'flag' column.<br>
+All data is binned in the source file. Testing and training observations have been flagged in the source data using the 'flag' column.<br>
 
 ## Instructions
-All steps can be run in order. Predictions can be made by altering the "user input" dictionary defined in the "Prediction" section.
+All steps can be run in order. Predictions can be made by altering the "user input" dictionary defined in the "Prediction" section. Values must match verbatim.
 
 
 ## Versioning
