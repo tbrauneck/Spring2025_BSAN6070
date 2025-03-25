@@ -12,6 +12,18 @@ This program uses ensemble classifier models to predict income class (>$50K or <
 • Work Class<br>
 • Age<br>
 
+This program compares the performance of four types of ensemble models:
+• Random Forest <br>
+• AdaBoost <br>
+• Gradient Boost <br>
+• Extreme Gradient Boost (XGB)<br>
+
+We begin with data cleaning, exploration, and preprocessing, then demonstrate hyperparameter tuning with examples of max_depth and n_estimators. This program also demonstrates an example of using k-fold cross validation for the tuning process.
+
+## Context
+
+This program was generated as an assignment in a graduate level machine learning class. For those who have reviewed my CA-03 Decision Trees post, this project uses the same data quality assessment, pre-processing, and exploration steps. The key difference in this program is step 2: Modeling.
+
 ## Authoring
 Authored by Tina Brauneck. Initially coded in March 2025.
 
