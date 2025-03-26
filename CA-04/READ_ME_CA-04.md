@@ -38,7 +38,8 @@ Access the dataset here: https://github.com/ArinB/MSBA-CA-03-Decision-Trees/blob
 All data is binned in the source file. Testing and training observations have been flagged in the source data using the 'flag' column.<br>
 
 ## Instructions
-All steps should be run in order. Note that performance variables are not renamed in each step, so if run out of order, the metics quoted may apply to a different model than intended. Take caution when selectively running blocks of code.
+All steps should be run in order, with exception to the k-fold cross validation section; that section is optional. Note that performance variables are not renamed in each step, so if run out of order, the metics quoted may apply to a different model than intended. Take caution when selectively running blocks of code.
+<br>
 Predictions can be made by altering the "user input" dictionary defined in the "Prediction" section. Values must match verbatim.
 
 
@@ -53,8 +54,10 @@ pandas<br>
 numpy<br>
 seaborn<br>
 time<br>
-plotnine<br>
-sklearn<br>
-scipy.stats<br>
+plotnine (ggplot, aes, geom_histogram, facet_wrap, geom_bar) <br>
+sklearn (GridSearchCV, StratifiedKFold, accuracy_score, confusion_matrix, precision_score, f1_score, recall_score, ConfusionMatrixDisplay, roc_curve, auc, RandomizedSearchCV, train_test_split, RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier, tree, metrics) <br>
+scipy.stats (chi2_contingency, randint)<br>
 graphviz<br>
+xgboost (XGBClassifier)<br>
+IPython (display)
 
