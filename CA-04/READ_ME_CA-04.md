@@ -1,7 +1,7 @@
 # CA-04 Ensemble Models
 
 ## Description
-This program uses ensemble classifier models to predict income class (>$50K or <$50K) based on 8 features:<br>
+This program uses ensemble classifier models to predict target classes (>50K or <=50K) based on 8 features:<br>
 <br>
 • Hours Worked per Week<br>
 • Occupation Category<br>
@@ -18,7 +18,7 @@ This program compares the performance of four types of ensemble models:
 • Gradient Boost <br>
 • Extreme Gradient Boost (XGB)<br>
 
-We begin with data cleaning, exploration, and preprocessing, then demonstrate hyperparameter tuning with examples of max_depth and n_estimators. This program also demonstrates an example of using k-fold cross validation for the tuning process.
+We begin with data cleaning, exploration, and preprocessing, then demonstrate hyperparameter tuning with examples of max_depth and n_estimators. This program also demonstrates an example of using k-fold cross validation and GridSearchCV for tuning across multiple hyperparameters. This section on k-fold cross validation can be skipped, without impact to the rest of the program. It is demonstrative only. The main goal of the program is to show a comparison of the four ensemble models, each tuned for the optimal n_estimators. All other hyperparameters are set to the default for the comparison.
 
 ## Context
 
