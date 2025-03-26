@@ -12,7 +12,7 @@ This program uses ensemble classifier models to predict target classes (>50K or 
 • Work Class<br>
 • Age<br>
 
-This program compares the performance of four types of ensemble models:
+This program compares the performance of four types of ensemble models: <br>
 • Random Forest <br>
 • AdaBoost <br>
 • Gradient Boost <br>
