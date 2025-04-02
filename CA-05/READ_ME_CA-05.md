@@ -9,12 +9,12 @@ This program is a simple movie recommender model that uses the KNN algorithm to 
 Authored by Tina Brauneck. Initially coded in April 2025 as an assignment for a graduate level machine learning class.
 
 ## Data Source
-The dataset is a small sample of IMDb data from the UCI Machine Learning Repository. It contains only 30 observations. Key features and identifiers in the dataset are movie name, IMDb, and genre. <br>
+The dataset is a small sample of IMDb data from the UCI Machine Learning Repository. It contains only 30 observations. Key features and identifiers in the dataset are movie name, IMDb rating, and genre. <br>
 Access the dataset here: https://github.com/ArinB/MSBA-CA-Data/raw/main/CA05/movies_recommendation_data.csv <br>
 
 
 ## Instructions
-All steps can be run in order. A sample prediction for a historical, biographical drama called "The Post" has been queued up in the "Recommendations" section. Predictions for other movies can be made by altering the "watched_movie_data" dictionary defined in the "Recommendations" section. A '1' indicates an association with the genre. A '0' indicates no association. Movies may have multiple dramas.
+All steps can be run in order. A sample prediction for a historical, biographical drama called "The Post" has been queued up in the "Recommendations" section. Predictions for other movies can be made by altering the "watched_movie_data" dictionary defined in the "Recommendations" section. A '1' indicates an association with the genre. A '0' indicates no association. Movies may have multiple genres.
 
 
 ## Versioning
