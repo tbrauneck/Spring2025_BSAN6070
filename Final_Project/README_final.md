@@ -22,14 +22,21 @@ This project investigates gender-based income disparities in the United States b
 * **Feature Engineering**: Categorical variables were encoded, and relevant features such as occupation codes, education levels, and weekly work hours were selected.
 * **Handling Missing Values**: Rows with missing critical information were removed to ensure data quality.
 
+
 ### 2. Model Training
+We trained multiple ensemble models, including Gradient Boosting Regressor, XGBoost Regressor, and AdaBoost Regressor, to predict individual income based on demographic and socioeconomic features.
 
-Each model underwent:
+Training Workflow for Each Model Included:
 
-* **Baseline Training**: Initial models were trained with default or basic hyperparameters.
-* **Hyperparameter Optimization**: Utilized `RandomizedSearchCV` with 100 iterations to fine-tune model parameters.
-* **Cross-Validation**: Employed 5-fold cross-validation to assess model performance.
+* Baseline Initialization: Models were initially trained using basic hyperparameters to establish a reference point.
 
+* Hyperparameter Tuning: Extensive hyperparameter searches were conducted using RandomizedSearchCV with 5-fold cross-validation. For example, the XGBoost model explored parameters such as n_estimators, learning_rate, max_depth, subsample, and colsample_bytree to optimize performance.
+
+* Cross-Validation: A KFold strategy with shuffling was employed to ensure stable and generalizable results across different subsets of the training data.
+
+* Manual Hyperparameter Sensitivity Testing: To deepen understanding of model behavior, individual hyperparameters (e.g., learning_rate, max_depth, n_estimators) were manually varied, and performance metrics such as MAPE were plotted to assess their impact.
+
+* Performance Assessment: Final models were evaluated using R² and MAPE on the test set. Feature importance was derived from the best-performing models using XGBoost’s built-in importance scores.
 ### 3. Model Evaluation
 
 * **Metrics Used**:
@@ -61,6 +68,19 @@ Simulated income predictions by altering the gender variable while keeping other
 
   * Occupation had a significantly higher impact on income predictions compared to gender.
   * The interaction between education and occupation explained a notable portion of the variance in income.
+
+## Model Deployment
+To make the analysis accessible and interactive, we deployed the final model using Streamlit, a Python-based web framework for data science apps.
+
+Deployment Features:
+
+* User Interface: Users can input demographic and work-related variables (e.g., gender, occupation, education, weekly work hours) through dropdowns and sliders.
+
+* Prediction Output: The app returns an estimated income based on the trained model and provides insight into how changes in input variables affect the prediction.
+
+* Visualization: Embedded charts display feature importance and counterfactual scenarios to interpret model behavior.
+
+
 
 ## Conclusion
 
