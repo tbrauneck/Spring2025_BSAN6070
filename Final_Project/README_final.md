@@ -19,8 +19,52 @@ This project investigates gender-based income disparities in the United States b
 
 ### 1. Data Preprocessing
 
-* **Feature Engineering**: Categorical variables were encoded, and relevant features such as occupation codes, education levels, and weekly work hours were selected.
-* **Handling Missing Values**: Rows with missing critical information were removed to ensure data quality.
+Our preprocessing pipeline included several stages to ensure data integrity, reduce noise, and prepare features for modeling:
+
+#### a. Feature and Row Filtering
+
+- **Worker Type**: Removed individuals labeled as "Unpaid family workers" in the `CLASSWKRD` column to focus only on income-earning individuals.
+  
+- **Redundant and Low-Value Features**: Features with duplicate counterparts ending in `D` (e.g., `CLASSWRK` vs. `CLASSWKRD`) were analyzed. In most cases, the `D` variants were dropped due to higher cardinality or redundancy, with the exception of `CLASSWKRD`, which was retained for its richer categorization.
+
+- **Multicollinearity and Redundancy**: Dropped columns such as `DEPARTS`, `ARRIVES`, `TRANWORK`, `REGION`, and `CLASSWKR` due to multicollinearity or overlap with more informative features.
+
+- **Causality Concerns**: Removed `PERWT` (person weight) based on causality considerations noted during exploratory analysis.
+
+- **Income Fields**: Retained only `INCEARN` (earned income), dropping `INCWAGE`, `INCINVST`, `INCOTHER`, and `INCTOT`, as `INCEARN` provided the cleanest and most representative measure for our target.
+
+- **Miscellaneous**: Dropped features with only a single value (e.g., `EMPSTAT`), as they add no variance to the model.
+
+#### b. Type Conversion
+
+- Explicitly cast several features to appropriate data types (e.g., integers or strings) to ensure compatibility with modeling steps.
+
+#### c. Outlier Handling
+
+Outliers were addressed using IQR-based thresholds:
+
+- `AGE`: Outliers beyond 1.5 * IQR were dropped.
+- `INCEARN`: A more conservative threshold of 2 * IQR was used due to skewness in income distribution.
+- `TRANTIME` (commute time): Only extreme outliers beyond 3 * IQR were removed.
+
+#### d. Missing Value Imputation
+
+- Missing value handling was planned based on a preliminary missingness report (`dqr_cat`), though imputation steps are not explicitly shown in this code section.
+
+#### e. Encoding
+
+**Categorical Encoding**:
+- One-hot encoding applied to low-cardinality variables (`SEX`, `CLASSWKRD`, `MARST`, `LANGUAGE`). Rare values in `LANGUAGE` were consolidated into an "Other" category.
+- Label encoding used for `RACE`, `BPL`, and `ANCESTR1`.
+
+**Multi-Label Encoding**:
+- Degree fields (`DEGFIELD` and `DEGFIELD2`) were combined into sets, and multi-hot encoding was applied using `MultiLabelBinarizer`.
+
+---
+
+This rigorous preprocessing ensured a high-quality feature set for downstream modeling and reduced the risk of data leakage, multicollinearity, or model overfitting.
+
+
 
 
 ### 2. Model Training
