@@ -78,9 +78,6 @@ Deployment Features:
 
 * Prediction Output: The app returns an estimated income based on the trained model and provides insight into how changes in input variables affect the prediction.
 
-* Visualization: Embedded charts display feature importance and counterfactual scenarios to interpret model behavior.
-
-
 
 ## Conclusion
 
